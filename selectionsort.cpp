@@ -3,7 +3,7 @@ using namespace std;
 
 void fillarray(int a[] , int n);
 void displayarray(int a[], int n);
-void bubblesort(int a[], int n);
+void selectionsort(int a[], int n);
 void swap(int &x, int &y);
 
 int main(){
@@ -16,7 +16,7 @@ int main(){
 	cout<<"the array elements are : "<<endl;
 	displayarray(a,n);
 	cout<<"calling function for sorting"<<endl;
-	bubblesort(a,n);
+	selectionsort(a,n);
 	cout<<"the sorted array is ";
 	displayarray(a,n);
 	
@@ -42,15 +42,20 @@ void swap(int &x, int &y){
 	y = temp;
 }
 
-void bubblesort(int a[], int n){
-	for(int p = 0; p<=n-2; p++){ 
-	for(int c = 0; c<=n-p-2;c++){
-		if(a[c]>a[c+1]){
-			swap(a[c],a[c+1]);
+void selectionsort(int a[], int n){
+	for(int i = 0; i<=n-2; i++){
+		int min = i;
+		for(int j=i+1;j<=n-1;j++){
+			if(a[min]>a[j]) {
+				min = j;
+			}
+			
 		}
+		if(min!=i){
+			swap(a[i],a[min]);
+			}
 		
-	}
-	 
+
 }
 
 }
