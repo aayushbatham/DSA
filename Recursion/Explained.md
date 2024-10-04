@@ -36,3 +36,6 @@ note - all the functions are called within the stack itself. (refer to print1.cp
 4) Print numbers from n to 1 using backtracking
 5) Sum of first n number using recursion
 6) Reverse an array
+7) Check Palindrome on a String
+
+## Multiple Recursion Calls
